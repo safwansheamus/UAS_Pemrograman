@@ -1,0 +1,15 @@
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\bin\Debug\UAS_OOP_1204037.exe.config
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\bin\Debug\UAS_OOP_1204037.exe
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\bin\Debug\UAS_OOP_1204037.pdb
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.csproj.AssemblyReference.cache
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.csproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.BonusLevel.resources
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.DaftarUlangMahasiswa.resources
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.Home.resources
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.ProgramStudi.resources
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.Properties.Resources.resources
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.csproj.GenerateResource.cache
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.exe
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.pdb
+C:\Users\ASUS\Music\UAS_OOP_1204037\UAS_OOP_1204037\obj\Debug\UAS_OOP_1204037.ViewMahasiswa.resources
