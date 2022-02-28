@@ -16,39 +16,46 @@ namespace UAS_OOP_1204037
         public BonusLevel()
         {
             InitializeComponent();
+            SqlConnection myConnection = new SqlConnection(@"Data Source=SAFWAN\SAFWANJIHYO; Initial Catalog = UAS; Integrated Security = True");
+
+            myConnection.Open();
+
+            SqlCommand myCommand = new SqlCommand("SELECT * FROM ms_prodi", myConnection);
+            SqlDataReader reader;
+
+            reader = myCommand.ExecuteReader();
+            DataTable myDataTable = new DataTable();
+            myDataTable.Columns.Add("kode_prodi", typeof(string));
+            myDataTable.Columns.Add("singkatan", typeof(string));
+            myDataTable.Load(reader);
+
+            //txtProgramStudi.ValueMember = "kode_prodi";
+            //txtProgramStudi.DisplayMember = "singkatan";
+            //txtProgramStudi.DataSource = myDataTable;
+
+            myConnection.Close();
+
         }
 
         //membuat method updateDB dengan parameter cmd
         private void UpdateDB(string cmd)
         {
-            //exception handler
             try
             {
-                //connection untuk koneksi ke basisdata P6_1204049
-                SqlConnection myConnection = new SqlConnection(@"Data Source=SAFWAN\SAFWANJIHYO;Initial Catalog=UAS;Integrated Security=True");
-
-                //membuka koneksi, menggunakan object myConnection
+                SqlConnection myConnection = new SqlConnection(@"Data Source=SAFWAN\SAFWANJIHYO; Initial Catalog = UAS; Integrated Security = True");
                 myConnection.Open();
-
-                //membuat objek dengan nama myCommand, inisialisasi dari class sqlCommand
                 SqlCommand myCommand = new SqlCommand();
-
-                //menetapkan koneksi basisdata yang digunakan yaitu object myConnection
                 myCommand.Connection = myConnection;
-
-                //mengatur query yang digunakan, diambil dari parameter cmd
                 myCommand.CommandText = cmd;
-
-                //eksekusi myCommand yang diambil dari parameter cmd
                 myCommand.ExecuteNonQuery();
 
-                //menampilkan pesan jika eksekusi berhasil
-                MessageBox.Show("Data Berhasil Disubmit !", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Data Berhasil Tersubmit !", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            //penanganan apabila terjadi error pada saat try, exception diset dalam variabel ex
+
             catch (Exception ex)
             {
-                //menampilkan pesan kesalahan
+
                 MessageBox.Show(ex.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -73,12 +80,65 @@ namespace UAS_OOP_1204037
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string myCmd = "INSERT INTO ms_mhs VALUES('"
-             + txtNpm.Text + "','"
-             + txtNamaMhs + "','"
-             + txtProgramStudi.Text + "')";
+            if (txtNpm.Text != "")
+            {
+                if (txtNamaMhs.Text != "")
+                {
+                    if (txtProgramStudi.Text != "")
+                    {
+                        string npm = txtNpm.Text;
+                        string nama = txtNamaMhs.Text;
+                        string prodi = this.txtProgramStudi.Text;
 
-            UpdateDB(myCmd);
+                        SqlConnection myConnection = new SqlConnection(@"Data Source=SAFWAN\SAFWANJIHYO; Initial Catalog = UAS; Integrated Security = True");
+                        string sql = "INSERT INTO ms_mhs ([npm],[nama_mhs]," + "[kode_prodi]) VALUES (@npm,@namaMhs,@kodeProdi)";
+
+                        using (SqlConnection Connection = new SqlConnection(@"Data Source = SAFWAN\SAFWANJIHYO; Initial Catalog = UAS; Integrated Security=True"))
+                        {
+                            try
+                            {
+                                Connection.Open();
+
+                                using (SqlCommand command = new SqlCommand(sql, Connection))
+                                {
+                                    command.Parameters.Add("@npm", SqlDbType.VarChar).Value = npm;
+                                    command.Parameters.Add("@namaMhs", SqlDbType.VarChar).Value = nama;
+                                    command.Parameters.Add("@kodeProdi", SqlDbType.VarChar).Value = prodi;
+
+                                    int rowsAdded = command.ExecuteNonQuery();
+                                    if (rowsAdded > 0)
+                                        MessageBox.Show("Data berhasil di simpan");
+                                    else
+                                        MessageBox.Show("Data tidak tersimpan");
+
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("ERROR:" + ex.Message);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nama harus diisi !", "Infromasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nama harus diisi !", "Infromasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("NPM harus diisi !", "Infromasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void BonusLevel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

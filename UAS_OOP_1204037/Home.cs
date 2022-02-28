@@ -49,5 +49,52 @@ namespace UAS_OOP_1204037
             newProgramStudi.MdiParent = this;
             newProgramStudi.Show(); 
         }
+
+        private void prodiToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            viewProdi tampilprodi = new viewProdi();
+            tampilprodi.MdiParent = this;
+            tampilprodi.Show();
+        }
+
+        private void daftarUlangToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            viewDaftarUlang VDU = new viewDaftarUlang();
+            VDU.MdiParent = this;
+            VDU.Show();
+        }
+
+        private void daftarUlangToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            DaftarUlangMahasiswa DU = new DaftarUlangMahasiswa();
+            DU.MdiParent = this;
+            DU.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateMahasiswa UM = new updateMahasiswa();
+            UM.MdiParent = this;
+            UM.Show();
+        }
+
+        private void prodiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            updateProdi UP = new updateProdi();
+            UP.MdiParent = this;
+            UP.Show();
+        }
+
+        private void daftarUlangToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            updateDU UDU = new updateDU();
+            UDU.MdiParent = this;
+            UDU.Show();
+        }
     }
 }

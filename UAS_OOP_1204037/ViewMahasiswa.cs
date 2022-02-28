@@ -17,7 +17,10 @@ namespace UAS_OOP_1204037
         {
             InitializeComponent();
         }
-
+        private SqlConnection conn;
+        private SqlCommand cmd1;
+        private SqlDataAdapter DataAdapter;
+        private DataSet DataSet;
         private DataSet ds_Mhs;
 
         public DataSet CreateMhsDataSet()
@@ -55,17 +58,27 @@ namespace UAS_OOP_1204037
             return myDataSet;
         }
 
-        private void RefreshDataSet()
-        {
-
-            ds_Mhs = CreateMhsDataSet();
-
-            dgMhs.DataSource = ds_Mhs.Tables["Mahasiswa"];
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            RefreshDataSet();
+           
+        }
+
+        private void ViewMahasiswa_Load(object sender, EventArgs e)
+        {
+            string constr = @"Data Source=SAFWAN\SAFWANJIHYO; Initial Catalog = UAS; Integrated Security = True";
+            conn = new SqlConnection(constr);
+            conn.Open();
+            cmd1 = new SqlCommand();
+            cmd1.Connection = conn;
+            cmd1.CommandType = CommandType.Text;
+            cmd1.CommandText = "select * from ms_mhs";
+            DataSet = new DataSet();
+            DataAdapter = new SqlDataAdapter(cmd1);
+            DataAdapter.Fill(DataSet, "ms_mhs");
+            dgMhs.DataSource = DataSet;
+            dgMhs.DataMember = "ms_mhs";
+            dgMhs.Refresh();
+            conn.Close();
         }
     }
 }

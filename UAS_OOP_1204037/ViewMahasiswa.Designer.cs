@@ -30,7 +30,6 @@
         {
             this.dgMhs = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgMhs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,25 +53,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "View Data Mahasiswa";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(209, 346);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(96, 40);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            // 
             // ViewMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 450);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgMhs);
             this.Name = "ViewMahasiswa";
             this.Text = "ViewMahasiswa";
+            this.Load += new System.EventHandler(this.ViewMahasiswa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgMhs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,6 +73,5 @@
 
         private System.Windows.Forms.DataGridView dgMhs;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

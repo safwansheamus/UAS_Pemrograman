@@ -72,11 +72,41 @@
       <DependentUpon>ProgramStudi.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updateDU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateDU.Designer.cs">
+      <DependentUpon>updateDU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateMahasiswa.Designer.cs">
+      <DependentUpon>updateMahasiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateProdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateProdi.Designer.cs">
+      <DependentUpon>updateProdi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewDaftarUlang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewDaftarUlang.Designer.cs">
+      <DependentUpon>viewDaftarUlang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewMahasiswa.Designer.cs">
       <DependentUpon>ViewMahasiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewProdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewProdi.Designer.cs">
+      <DependentUpon>viewProdi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BonusLevel.resx">
       <DependentUpon>BonusLevel.cs</DependentUpon>
@@ -99,8 +129,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="updateDU.resx">
+      <DependentUpon>updateDU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateMahasiswa.resx">
+      <DependentUpon>updateMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProdi.resx">
+      <DependentUpon>updateProdi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewDaftarUlang.resx">
+      <DependentUpon>viewDaftarUlang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewMahasiswa.resx">
       <DependentUpon>ViewMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewProdi.resx">
+      <DependentUpon>viewProdi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

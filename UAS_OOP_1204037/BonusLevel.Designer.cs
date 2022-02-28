@@ -137,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BonusLevel";
             this.Text = "BonusLevel";
+            this.Load += new System.EventHandler(this.BonusLevel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

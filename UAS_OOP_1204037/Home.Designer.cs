@@ -32,12 +32,17 @@
             this.inputMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MhsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProdiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.daftarUlangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programStudiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programStudiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prodiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarUlangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarUlangToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prodiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarUlangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +65,6 @@
             this.inputMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MhsMenuItem,
             this.ProdiMenuItem,
-            this.daftarUlangToolStripMenuItem,
             this.exitMenu});
             this.inputMenuItem.Name = "inputMenuItem";
             this.inputMenuItem.Size = new System.Drawing.Size(57, 24);
@@ -69,50 +73,33 @@
             // MhsMenuItem
             // 
             this.MhsMenuItem.Name = "MhsMenuItem";
-            this.MhsMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.MhsMenuItem.Size = new System.Drawing.Size(177, 26);
             this.MhsMenuItem.Text = "Mahasiswa";
             this.MhsMenuItem.Click += new System.EventHandler(this.MhsMenuItem_Click);
             // 
             // ProdiMenuItem
             // 
             this.ProdiMenuItem.Name = "ProdiMenuItem";
-            this.ProdiMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ProdiMenuItem.Size = new System.Drawing.Size(177, 26);
             this.ProdiMenuItem.Text = "Prodi";
             this.ProdiMenuItem.Click += new System.EventHandler(this.prodiToolStripMenuItem_Click);
-            // 
-            // daftarUlangToolStripMenuItem
-            // 
-            this.daftarUlangToolStripMenuItem.Name = "daftarUlangToolStripMenuItem";
-            this.daftarUlangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.daftarUlangToolStripMenuItem.Text = "Daftar Ulang";
-            this.daftarUlangToolStripMenuItem.Click += new System.EventHandler(this.daftarUlangToolStripMenuItem_Click);
             // 
             // exitMenu
             // 
             this.exitMenu.Name = "exitMenu";
-            this.exitMenu.Size = new System.Drawing.Size(224, 26);
+            this.exitMenu.Size = new System.Drawing.Size(177, 26);
             this.exitMenu.Text = "Exit";
             this.exitMenu.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programStudiToolStripMenuItem});
+            this.programStudiToolStripMenuItem,
+            this.prodiToolStripMenuItem,
+            this.daftarUlangToolStripMenuItem1});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "&View";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
-            this.updateToolStripMenuItem.Text = "&Update";
-            // 
-            // transaksiToolStripMenuItem
-            // 
-            this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.transaksiToolStripMenuItem.Text = "&Transaksi";
             // 
             // programStudiToolStripMenuItem
             // 
@@ -120,6 +107,66 @@
             this.programStudiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.programStudiToolStripMenuItem.Text = "Mahasiswa";
             this.programStudiToolStripMenuItem.Click += new System.EventHandler(this.programStudiToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mahasiswaToolStripMenuItem,
+            this.prodiToolStripMenuItem1,
+            this.daftarUlangToolStripMenuItem});
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.updateToolStripMenuItem.Text = "&Update";
+            // 
+            // transaksiToolStripMenuItem
+            // 
+            this.transaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.daftarUlangToolStripMenuItem2});
+            this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.transaksiToolStripMenuItem.Text = "&Transaksi";
+            // 
+            // prodiToolStripMenuItem
+            // 
+            this.prodiToolStripMenuItem.Name = "prodiToolStripMenuItem";
+            this.prodiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prodiToolStripMenuItem.Text = "Prodi";
+            this.prodiToolStripMenuItem.Click += new System.EventHandler(this.prodiToolStripMenuItem_Click_1);
+            // 
+            // daftarUlangToolStripMenuItem1
+            // 
+            this.daftarUlangToolStripMenuItem1.Name = "daftarUlangToolStripMenuItem1";
+            this.daftarUlangToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.daftarUlangToolStripMenuItem1.Text = "Daftar Ulang";
+            this.daftarUlangToolStripMenuItem1.Click += new System.EventHandler(this.daftarUlangToolStripMenuItem1_Click);
+            // 
+            // daftarUlangToolStripMenuItem2
+            // 
+            this.daftarUlangToolStripMenuItem2.Name = "daftarUlangToolStripMenuItem2";
+            this.daftarUlangToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.daftarUlangToolStripMenuItem2.Text = "Daftar Ulang";
+            this.daftarUlangToolStripMenuItem2.Click += new System.EventHandler(this.daftarUlangToolStripMenuItem2_Click);
+            // 
+            // mahasiswaToolStripMenuItem
+            // 
+            this.mahasiswaToolStripMenuItem.Name = "mahasiswaToolStripMenuItem";
+            this.mahasiswaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mahasiswaToolStripMenuItem.Text = "Mahasiswa";
+            this.mahasiswaToolStripMenuItem.Click += new System.EventHandler(this.mahasiswaToolStripMenuItem_Click);
+            // 
+            // prodiToolStripMenuItem1
+            // 
+            this.prodiToolStripMenuItem1.Name = "prodiToolStripMenuItem1";
+            this.prodiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.prodiToolStripMenuItem1.Text = "Prodi";
+            this.prodiToolStripMenuItem1.Click += new System.EventHandler(this.prodiToolStripMenuItem1_Click);
+            // 
+            // daftarUlangToolStripMenuItem
+            // 
+            this.daftarUlangToolStripMenuItem.Name = "daftarUlangToolStripMenuItem";
+            this.daftarUlangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.daftarUlangToolStripMenuItem.Text = "Daftar Ulang";
+            this.daftarUlangToolStripMenuItem.Click += new System.EventHandler(this.daftarUlangToolStripMenuItem_Click_1);
             // 
             // Home
             // 
@@ -131,6 +178,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -147,9 +195,14 @@
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem daftarUlangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitMenu;
         private System.Windows.Forms.ToolStripMenuItem programStudiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prodiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem daftarUlangToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem daftarUlangToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem mahasiswaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prodiToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem daftarUlangToolStripMenuItem;
     }
 }
 
